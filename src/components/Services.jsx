@@ -5,11 +5,11 @@ export default function Services() {
 
   const services = [
     {
-    icon: "fa-solid fa-code",
-    title: lang === 'en' ? "Web Development" : "تطوير المواقع",
-    desc: lang === 'en'
-      ? "Responsive, high-performance websites built with React, Flutter Web, and cutting-edge technologies."
-      : "مواقع متجاوبة وعالية الأداء باستخدام React، Flutter Web، وأحدث التقنيات."
+      icon: "fa-solid fa-code",
+      title: lang === 'en' ? "Web Development" : "تطوير المواقع",
+      desc: lang === 'en'
+        ? "Responsive, high-performance websites built with React, Flutter Web, and cutting-edge technologies."
+        : "مواقع متجاوبة وعالية الأداء باستخدام React، Flutter Web، وأحدث التقنيات."
     },
     {
       icon: "fa-solid fa-palette",
@@ -26,11 +26,18 @@ export default function Services() {
         : "تطبيقات جوال متعددة المنصات لأندرويد وآيفون باستخدام Flutter مع تكامل كامل مع الخادم."
     },
     {
-      icon: "fa-solid fa-gamepad", 
+      icon: "fa-solid fa-gamepad",
       title: lang === 'en' ? "Game Development" : "تطوير الألعاب",
       desc: lang === 'en'
         ? "Engaging 2D and 3D mobile games built with Unreal Engine, optimized for performance and fun."
         : "ألعاب جوال ثنائية وثلاثية الأبعاد باستخدام Unreal Engine، مصممة للأداء والمتعة."
+    },
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: lang === 'en' ? "Cybersecurity Services" : "خدمات الأمن السيبراني",
+      desc: lang === 'en'
+        ? "Protect your business with penetration testing, threat monitoring, and secure infrastructure design."
+        : "احمِ عملك من خلال اختبار الاختراق، مراقبة التهديدات، وتصميم بنية تحتية آمنة."
     }
   ];
 
@@ -44,7 +51,6 @@ export default function Services() {
               <i className={`${service.icon} fa-3x`}></i>
               <h3>{service.title}</h3>
               <p>{service.desc}</p>
-              {/* <a href="#contact">{lang === 'en' ? 'Contact Us' : 'اتصل بنا'}</a> */}
             </div>
           ))}
         </div>

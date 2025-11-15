@@ -32,7 +32,9 @@ body {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  .about{
+    background: radial-gradient(circle at 30% 68%, rgba(1, 170, 255, 0.15), transparent 30%);
+  }
 }
 
 @import "./header";

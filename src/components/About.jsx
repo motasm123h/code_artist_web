@@ -17,6 +17,8 @@ export default function About() {
   return (
     <div id="about">
       <div className="container">
+        <div className="about">
+
         <div className="row">
           <div className="about-col-1">
             <img src="/images/about_us.jpg" alt={t.title} />
@@ -26,23 +28,45 @@ export default function About() {
             <p>{t.desc}</p>
 
             <div className="tab-titles">
-              <p className={`tab-links ${activeTab === 'Skills' ? 'active-linke' : ''}`} onClick={() => setActiveTab('Skills')}>
+              <p
+                className={`tab-links ${activeTab === 'Skills' ? 'active-linke' : ''}`}
+                onClick={() => setActiveTab('Skills')}
+              >
                 {t.skills}
               </p>
-           </div>
-
-            <div className={`tab-contents ${activeTab === 'Skills' ? 'active-tabe' : ''}`} id="Skills">
-              <ul>
-                <li><span>{lang === 'en' ? 'UI/UX Design' : 'تصميم واجهات'}</span><br />Figma, Adobe XD</li>
-                <li><span>{lang === 'en' ? 'Graphic Design' : 'تصميم جرافيك'}</span><br />Photoshop, Illustrator</li>
-                <li><span>{lang === 'en' ? 'Web & App' : 'تطوير تطبيقات ومواقع الويب'}</span><br />Laravel, PHP, Python, React, Flutter, JavaScript</li>
-                <li><span>{lang === 'en' ? 'Game Development' : 'تطوير الألعاب'}</span><br />Unreal Engine, Blender, Maya</li>
-              </ul>
             </div>
 
-          
+            <div
+              className={`tab-contents ${activeTab === 'Skills' ? 'active-tabe' : ''}`}
+              id="Skills"
+            >
+              <ul>
+                <li>
+                  <span>{lang === 'en' ? 'UI/UX Design' : 'تصميم واجهات'}</span><br />
+                  Figma, Adobe XD
+                </li>
+                <li>
+                  <span>{lang === 'en' ? 'Graphic Design' : 'تصميم جرافيك'}</span><br />
+                  Photoshop, Illustrator
+                </li>
+                <li>
+                  <span>{lang === 'en' ? 'Web & App' : 'تطوير تطبيقات ومواقع الويب'}</span><br />
+                  Laravel, PHP, Python, React, Flutter, JavaScript
+                </li>
+                <li>
+                  <span>{lang === 'en' ? 'Game Development' : 'تطوير الألعاب'}</span><br />
+                  Unreal Engine, Blender, Maya
+                </li>
+                <li>
+                  <span>{lang === 'en' ? 'Cybersecurity' : 'الأمن السيبراني'}</span><br />
+                  Penetration Testing, Threat Monitoring, Secure Infrastructure
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        </div>
+
       </div>
     </div>
   );

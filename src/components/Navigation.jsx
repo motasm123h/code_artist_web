@@ -16,6 +16,12 @@ export default function Navigation() {
           <span className="code"></span>Code Artist<span className="code"></span>
         </a>
 
+        {/* Hamburger icon (visible on mobile) */}
+        <i
+          className="fas fa-bars menu-icon"
+          onClick={() => setMenuOpen(true)}
+        ></i>
+
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {['Home', 'about', 'services', 'portfolio', 'contact'].map((section) => (
             <li key={section}>
@@ -37,28 +43,29 @@ export default function Navigation() {
               </a>
             </li>
           ))}
-          <i className="fas fa-xmark close-icon" onClick={() => setMenuOpen(false)}></i>
+          <i
+            className="fas fa-xmark close-icon"
+            onClick={() => setMenuOpen(false)}
+          ></i>
         </ul>
 
         <div className="actions">
           <div
             className={`lang-switch ${lang === 'ar' ? 'ar' : 'en'}`}
             onClick={toggleLang}
-            role="button"
+            // role="button"
             tabIndex={0}
             aria-label="Toggle language"
           >
             {lang === 'ar' ? (
               <>
-                <span className="label">عربي</span>
-                <span className="label">EN</span>
-                <div className="knob">ع</div>
+                <span className="label">En</span>
+                <div className="knob"></div>
               </>
             ) : (
               <>
-                <span className="label">EN</span>
-                <span className="label">عربي</span>
-                <div className="knob">EN</div>
+                <span className="label">ِAr</span>
+                <div className="knob"></div>
               </>
             )}
           </div>
