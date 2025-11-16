@@ -37,6 +37,13 @@ body {
   }
 }
 
+
+@media (max-width: 1250px) {
+.container{
+  margin: 15px;
+}
+}
+
 @import "./header";
 @import "./about";
 @import "./services";
